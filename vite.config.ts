@@ -6,6 +6,7 @@ import path from 'path'
 export default defineConfig({
   mode: 'production',
   plugins: [react()],
+  base: "/vite deploy",
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
