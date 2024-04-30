@@ -1,8 +1,8 @@
 import { useEffect } from "react";
-import pp from "@/assets/My components/Abhishek.png";
-import TS from "@/assets/My components/file_type_typescript_icon_130108.svg";
-import RJ from "@/assets/My components/reactjs_logo_icon_206693.svg";
-import AP from "@/assets/My components/apps-2-line.svg";
+import pp from "@/assets/MyComponents/Abhishek.png";
+import TS from "@/assets/MyComponents/file_type_typescript_icon_130108.svg";
+import RJ from "@/assets/MyComponents/reactjs_logo_icon_206693.svg";
+import AP from "@/assets/MyComponents/apps-2-line.svg";
 import CountUp from "react-countup";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -14,13 +14,13 @@ const Hero = () => {
       once: true, // Only animate elements once
     });
   }, []);
+  
 
   return (
     <>
-      <section className="pt-0 pl-6" id="about">
+      <section className="pt-0" id="about">
         <div className="container pt-14">
           <div className="md:flex items-center justify-between sm:flex-col md:flex-row">
-            
             {/* hero left start */}
             <div className="w-full md:basis-1/2">
               <h5
@@ -65,7 +65,9 @@ const Hero = () => {
                 data-aos-duration="1500"
                 className="flex gap-2 text-headingColor mt-12 font-[500] text-[14px] leading-7 sm:pl-14 sm:pr-10"
               >
-                <img src={AP} alt="" />
+                <img src={AP} 
+                 alt=""
+                />
                 <b>
                   I am a software engineering aspirant who is seeking to find
                   the opportunity to upskill in a hardworking and competitive
@@ -74,6 +76,7 @@ const Hero = () => {
                   the software engineering industry by becoming an asset.
                 </b>
               </p>
+
               <div className="flex items-center gap-9 mt-14">
                 <span className="text-smallTextColor text-[20px] font-[600]">
                   Connect

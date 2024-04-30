@@ -4,9 +4,9 @@ import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: "/portfolio/",
   mode: 'production',
   plugins: [react()],
-  base: "/vite deploy",
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),

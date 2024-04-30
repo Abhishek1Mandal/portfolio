@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import data from '@/assets/portfolioData/portfolioData';
+import data from "@/assets/portfolioData/portfolioData";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -31,13 +31,11 @@ const Portfolio = () => {
       setPortfolios(data);
     } else if (selectTab === "web-design") {
       const filteredData = data.filter(
-        (item: { category: string }) => item.category === "Web Design"
+        (item) => item.category === "Web Design"
       );
       setPortfolios(filteredData);
     } else if (selectTab === "ux-design") {
-      const filteredData = data.filter(
-        (item: { category: string }) => item.category === "Ux"
-      );
+      const filteredData = data.filter((item) => item.category === "Ux");
       setPortfolios(filteredData);
     }
   }, [selectTab]);
@@ -56,16 +54,11 @@ const Portfolio = () => {
     };
   }, []);
 
-  interface PortfolioItem {
-    imgUrl: string;
-    siteUrl: string;
-    // Add other properties as needed
-  }
-
   return (
     <>
-      <section id="portfolio" className="pl-6">
+      <section id="portfolio">
         <div className="container" ref={containerRef}>
+          
           {/* Title & Buttons */}
           <div className="flex items-center justify-between flex-wrap">
             <div className="mb-7 sm:mb-0">
@@ -97,43 +90,41 @@ const Portfolio = () => {
           </div>
 
           <div className="flex items-center gap-4 flex-wrap mt-12">
-            {portfolios
-              ?.slice(0, nextItems)
-              .map((portfolio: PortfolioItem, index: number) => (
-                <div
-                  key={index}
-                  data-aos="fade-zoom-in"
-                  data-aos-delay="50"
-                  data-aos-duration="1000"
-                  className={`group max-w-full sm:w-[48.5%] md:w-[31.8%] lg:w-[32.2%] relative z-[0] ${
-                    showNewItems
-                      ? "opacity-100 translate-y-0"
-                      : "opacity-0 translate-y-4"
-                  }`}
-                >
-                  <figure>
-                    <img
-                      className="rounded-[8px]"
-                      src={portfolio.imgUrl}
-                      alt=""
-                    />
-                  </figure>
+            {portfolios?.slice(0, nextItems).map((portfolio, index) => (
+              <div
+                key={index}
+                data-aos="fade-zoom-in"
+                data-aos-delay="50"
+                data-aos-duration="1000"
+                className={`group max-w-full sm:w-[48.5%] md:w-[31.8%] lg:w-[32.2%] relative z-[0] ${
+                  showNewItems
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-4"
+                }`}
+              >
+                <figure>
+                  <img
+                    className="rounded-[8px]"
+                    src={portfolio.imgUrl}
+                    alt=""
+                  />
+                </figure>
 
-                  <div className="w-full h-full bg-primaryColor bg-opacity-40 absolute top-0 left-0 z-[5] hidden group-hover:block">
-                    <div className="w-full h-full flex items-center justify-center">
-                      <button className="text-white bg-gray-600 bg-headingColor hover:bg-smallTextColor py-2 px-4 rounded-[8px] font-[500] ease-in duration-200">
-                        <a
-                          target="_blank"
-                          rel="noreferrer"
-                          href={portfolio.siteUrl && portfolio.siteUrl}
-                        >
-                          Details
-                        </a>
-                      </button>
-                    </div>
+                <div className="w-full h-full bg-primaryColor bg-opacity-40 absolute top-0 left-0 z-[5] hidden group-hover:block">
+                  <div className="w-full h-full flex items-center justify-center">
+                    <button className="text-white bg-gray-600 bg-headingColor hover:bg-smallTextColor py-2 px-4 rounded-[8px] font-[500] ease-in duration-200">
+                      <a
+                        target="_blank"
+                        rel="noreferrer"
+                        href={portfolio.siteUrl && portfolio.siteUrl}
+                      >
+                        Details
+                      </a>
+                    </button>
                   </div>
                 </div>
-              ))}
+              </div>
+            ))}
           </div>
 
           <div className="text-center mt-6">
@@ -146,6 +137,7 @@ const Portfolio = () => {
               </button>
             )}
           </div>
+
         </div>
       </section>
     </>

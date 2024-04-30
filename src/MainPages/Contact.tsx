@@ -1,5 +1,3 @@
-
-
 const Contact = () => {
   const handleSendEmail = () => {
     const subject = "Subject of your email";
@@ -15,7 +13,7 @@ const Contact = () => {
 
   return (
     <>
-      <section id="contact" className="pb-16 pl-6">
+      <section id="contact" className="pb-16">
         <div className="container">
           <h2 className="text-headingColor font-[700] text-[2.5rem] mb-8">
             Get in touch

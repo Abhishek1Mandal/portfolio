@@ -2,14 +2,14 @@ import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import backendImg from "@/assets/My components/backend.png";
-import react from "@/assets/My components/react.svg";
-import Vite from "@/assets/My components/vite_logo_icon_249258.svg";
-import typescript from "@/assets/My components/typescript_logo_icon_249332.svg";
-import html from "@/assets/My components/html.svg";
-import pyImage from "@/assets/My components/pyImage.png";
-import AI from "@/assets/My components/illustrator_brands_icon_256539.svg";
-import Visual from "@/assets/My components/basic_visual_brands_icon_256601.svg";
+import backendImg from "@/assets/MyComponents/backend.png";
+import react from "@/assets/MyComponents/react.svg";
+import Vite from "@/assets/MyComponents/vite_logo_icon_249258.svg";
+import typescript from "@/assets/MyComponents/typescript_logo_icon_249332.svg";
+import html from "@/assets/MyComponents/html.svg";
+import pyImage from "@/assets/MyComponents/pyImage.png";
+import AI from "@/assets/MyComponents/illustrator_brands_icon_256539.svg";
+import Visual from "@/assets/MyComponents/basic_visual_brands_icon_256601.svg";
 import "aos/dist/aos.css";
 
 const Services = () => {
@@ -17,22 +17,23 @@ const Services = () => {
 
   useEffect(() => {
     AOS.init();
-
+  
     // Add an event listener to detect scroll direction
-    let lastScrollTop =
-      window.pageYOffset || document.documentElement.scrollTop;
-    window.addEventListener("scroll", () => {
-      const scrollTop =
-        window.pageYOffset || document.documentElement.scrollTop;
+    let lastScrollTop = 0;
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       setScrollDirection(scrollTop > lastScrollTop ? "down" : "up");
       lastScrollTop = scrollTop;
-    });
-
+    };
+  
+    window.addEventListener("scroll", handleScroll);
+  
     return () => {
       // Remove the event listener when the component unmounts
-      window.removeEventListener("scroll", () => {});
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+  
 
   return (
     <>
@@ -67,7 +68,7 @@ const Services = () => {
                               : "top-top"
                           }
                           data-aos-duration="1200"
-                          className={`bg-white p-4 border border-black rounded group shadow-md cursor-pointer ease-in duration-150 ${
+                          className={`p-4 bg-white rounded group shadow cursor-pointer ease-in duration-150 ${
                             scrollDirection === "down" ? "fade-in" : "fade-out"
                           }`}
                         >
@@ -84,7 +85,7 @@ const Services = () => {
                     </div>
 
                     <div
-                      className="rounded-full bg-black border-green-500 border-4 w-10 h-10 absolute left-1/2
+                      className="rounded-full bg-black border-white border-4 w-10 h-10 absolute left-1/2
                                 transform -translate-x-1/2 -translate-y-4 sm:translate-y-0 flex items-center justify-center"
                     >
                       <figure>
@@ -104,7 +105,7 @@ const Services = () => {
                             scrollDirection === "down" ? "left" : "right"
                           }`}
                           data-aos-duration="1200"
-                          className={`bg-white p-4 border border-black rounded group shadow-md cursor-pointer ease-in duration-150 ${
+                          className={`bg-white p-4 rounded group shadow cursor-pointer ease-in duration-150 ${
                             scrollDirection === "down" ? "fade-in" : "fade-out"
                           }`}
                         >
@@ -121,7 +122,7 @@ const Services = () => {
                     </div>
 
                     <div
-                      className="rounded-full bg-black border-green-500 border-4 w-10 h-10 absolute left-1/2
+                      className="rounded-full bg-black border-white border-4 w-10 h-10 absolute left-1/2
                                 transform -translate-x-1/2 -translate-y-4 sm:translate-y-0 flex items-center justify-center"
                     >
                       <figure>
@@ -146,7 +147,7 @@ const Services = () => {
                               : "top-top"
                           }
                           data-aos-duration="1200"
-                          className={`bg-white p-4 border border-black rounded group shadow-md cursor-pointer ease-in duration-150 ${
+                          className={`p-4 bg-white rounded group shadow cursor-pointer ease-in duration-150 ${
                             scrollDirection === "down" ? "fade-in" : "fade-out"
                           }`}
                         >
@@ -163,7 +164,7 @@ const Services = () => {
                     </div>
 
                     <div
-                      className="rounded-full bg-black border-green-500 border-4 w-10 h-10 absolute left-1/2
+                      className="rounded-full bg-black border-white border-4 w-10 h-10 absolute left-1/2
                                 transform -translate-x-1/2 -translate-y-4 sm:translate-y-0 flex items-center justify-center"
                     >
                       <figure>
@@ -183,7 +184,7 @@ const Services = () => {
                             scrollDirection === "down" ? "left" : "right"
                           }`}
                           data-aos-duration="1200"
-                          className={`bg-white p-4 border border-black rounded group shadow-md cursor-pointer ease-in duration-150 ${
+                          className={`bg-white p-4 rounded group shadow cursor-pointer ease-in duration-150 ${
                             scrollDirection === "down" ? "fade-in" : "fade-out"
                           }`}
                         >
@@ -200,7 +201,7 @@ const Services = () => {
                     </div>
 
                     <div
-                      className="rounded-full bg-black border-green-500 border-4 w-10 h-10 absolute left-1/2
+                      className="rounded-full bg-black border-white border-4 w-10 h-10 absolute left-1/2
                                 transform -translate-x-1/2 -translate-y-4 sm:translate-y-0 flex items-center justify-center"
                     >
                       <figure>
@@ -224,7 +225,7 @@ const Services = () => {
                               : "top-top"
                           }
                           data-aos-duration="1200"
-                          className={`bg-white p-4 border border-black rounded group shadow-md cursor-pointer ease-in duration-150 ${
+                          className={`p-4 bg-white rounded group shadow cursor-pointer ease-in duration-150 ${
                             scrollDirection === "down" ? "fade-in" : "fade-out"
                           }`}
                         >
@@ -241,7 +242,7 @@ const Services = () => {
                     </div>
 
                     <div
-                      className="rounded-full bg-black border-green-500 border-4 w-10 h-10 absolute left-1/2
+                      className="rounded-full bg-black border-white border-4 w-10 h-10 absolute left-1/2
                                 transform -translate-x-1/2 -translate-y-4 sm:translate-y-0 flex items-center justify-center"
                     >
                       <figure>
@@ -261,7 +262,7 @@ const Services = () => {
                             scrollDirection === "down" ? "left" : "right"
                           }`}
                           data-aos-duration="1200"
-                          className={`bg-white p-4 border border-black rounded group shadow-md cursor-pointer ease-in duration-150 ${
+                          className={`bg-white p-4 rounded group shadow cursor-pointer ease-in duration-150 ${
                             scrollDirection === "down" ? "fade-in" : "fade-out"
                           }`}
                         >
@@ -278,7 +279,7 @@ const Services = () => {
                     </div>
 
                     <div
-                      className="rounded-full bg-black border-green-500 border-4 w-10 h-10 absolute left-1/2
+                      className="rounded-full bg-black border-white border-4 w-10 h-10 absolute left-1/2
                                 transform -translate-x-1/2 -translate-y-4 sm:translate-y-0 flex items-center justify-center"
                     >
                       <figure>
@@ -303,7 +304,7 @@ const Services = () => {
                               : "top-top"
                           }
                           data-aos-duration="1200"
-                          className={`bg-white p-4 border border-black rounded group shadow-md cursor-pointer ease-in duration-150 ${
+                          className={`p-4 bg-white rounded group shadow cursor-pointer ease-in duration-150 ${
                             scrollDirection === "down" ? "fade-in" : "fade-out"
                           }`}
                         >
@@ -320,7 +321,7 @@ const Services = () => {
                     </div>
 
                     <div
-                      className="rounded-full bg-black border-green-500 border-4 w-10 h-10 absolute left-1/2
+                      className="rounded-full bg-black border-white border-4 w-10 h-10 absolute left-1/2
                                 transform -translate-x-1/2 -translate-y-4 sm:translate-y-0 flex items-center justify-center"
                     >
                       <figure>

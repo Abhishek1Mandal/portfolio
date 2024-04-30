@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import CV from "@/assets/MyComponents/Resume.pdf";
 const Header = () => {
   // Define menuRef with the correct type (HTMLDivElement)
   const menuRef = useRef<HTMLDivElement | null>(null);
@@ -12,7 +13,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="w-full pl-4 h-[80px] bg-[#444] leading-[80px] flex items-center">
+      <header className="w-full h-[80px] bg-[#444] leading-[80px] flex items-center">
         <div className="container">
           <div className="flex items-center justify-between">
             {/* Logo start */}
@@ -53,7 +54,7 @@ const Header = () => {
 
             {/* Menu-right */}
             <div className="flex items-center gap-4">
-            <a href="src\assets\My components\Resume (Abhi).pdf" download="Abhishek Resume">
+              <a href={CV} download="Abhishek CV">
                 <button className="md:flex md:items-center mx-4 my-6 md:my-0 flex items-center gap-2 text-white font-[600] border border-solid border-smallTextColor py-2 px-4 rounded-[8px] max-h-[40px] hover:bg-smallTextColor hover:text-white hover:font-[500] ease-in duration-200">
                   <svg
                     className="w-4 h-4 text-white dark:text-white"
@@ -73,7 +74,6 @@ const Header = () => {
                   Resume
                 </button>
               </a>
-
               <span
                 onClick={toggleMenu}
                 className="text-2xl text-smallTextColor md:hidden cursor-pointer"
