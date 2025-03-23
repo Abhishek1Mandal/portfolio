@@ -56,7 +56,7 @@ const Portfolio = () => {
 
   return (
     <>
-      <section id="portfolio">
+      <section className="bg-gray-300" id="portfolio">
         <div className="container" ref={containerRef}>
           
           {/* Title & Buttons */}

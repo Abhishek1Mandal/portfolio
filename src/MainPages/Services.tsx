@@ -17,27 +17,27 @@ const Services = () => {
 
   useEffect(() => {
     AOS.init();
-  
+
     // Add an event listener to detect scroll direction
     let lastScrollTop = 0;
     const handleScroll = () => {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
       setScrollDirection(scrollTop > lastScrollTop ? "down" : "up");
       lastScrollTop = scrollTop;
     };
-  
+
     window.addEventListener("scroll", handleScroll);
-  
+
     return () => {
       // Remove the event listener when the component unmounts
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  
 
   return (
     <>
-      <section id="services">
+      <section className="bg-gray-300" id="services">
         <div className="container lg:pt-5">
           <div className="text-center">
             <h2 className="text-headingColor font-[800] text-[2.4rem] mb-5">
@@ -68,7 +68,7 @@ const Services = () => {
                               : "top-top"
                           }
                           data-aos-duration="1200"
-                          className={`p-4 bg-white rounded group shadow cursor-pointer ease-in duration-150 ${
+                          className={`p-1.5  bg-white rounded-lg group shadow-lg cursor-pointer ease-in duration-150 ${
                             scrollDirection === "down" ? "fade-in" : "fade-out"
                           }`}
                         >
@@ -78,7 +78,7 @@ const Services = () => {
                               src={react}
                               alt="ReactJs"
                             ></img>
-                            ReactJs
+                            <div className="lg:ml-0 ml-44">ReactJs</div>
                           </h3>
                         </div>
                       </div>
@@ -105,7 +105,7 @@ const Services = () => {
                             scrollDirection === "down" ? "left" : "right"
                           }`}
                           data-aos-duration="1200"
-                          className={`bg-white p-4 rounded group shadow cursor-pointer ease-in duration-150 ${
+                          className={`p-1.5 bg-white rounded-lg group shadow-lgcursor-pointer ease-in duration-150 ${
                             scrollDirection === "down" ? "fade-in" : "fade-out"
                           }`}
                         >
@@ -115,7 +115,7 @@ const Services = () => {
                               src={Vite}
                               alt="ViteJs"
                             ></img>
-                            ViteJs
+                            <div className="lg:ml-0 ml-48">ViteJs</div>
                           </h3>
                         </div>
                       </div>
@@ -147,17 +147,17 @@ const Services = () => {
                               : "top-top"
                           }
                           data-aos-duration="1200"
-                          className={`p-4 bg-white rounded group shadow cursor-pointer ease-in duration-150 ${
+                          className={`p-1.5 bg-white rounded-lg group shadow-lg cursor-pointer ease-in duration-150 ${
                             scrollDirection === "down" ? "fade-in" : "fade-out"
                           }`}
                         >
                           <h3 className="flex items-center text-[20px] ">
                             <img
-                              className="h-[40px] w-[40px] items-center ml-14 mr-5"
+                              className="h-[36px] w-[34px] items-center ml-14 mr-5"
                               src={typescript}
                               alt="Typescript"
                             ></img>
-                            Typescript
+                            <div className="lg:ml-0 ml-44">Typescript</div>
                           </h3>
                         </div>
                       </div>
@@ -184,17 +184,17 @@ const Services = () => {
                             scrollDirection === "down" ? "left" : "right"
                           }`}
                           data-aos-duration="1200"
-                          className={`bg-white p-4 rounded group shadow cursor-pointer ease-in duration-150 ${
+                          className={`p-1.5 bg-white rounded-lg group shadow-lg cursor-pointer ease-in duration-150 ${
                             scrollDirection === "down" ? "fade-in" : "fade-out"
                           }`}
                         >
                           <h3 className="flex items-center text-[20px] ">
                             <img
-                              className="h-[40px] w-[40px] items-center ml-10 mr-5"
+                              className="h-[36px] w-[40px] items-center ml-10 mr-5"
                               src={html}
                               alt="HTML & CSS"
                             ></img>
-                            HTML & CSS
+                            <div className="lg:ml-0 ml-44">HTML & CSS</div>
                           </h3>
                         </div>
                       </div>
@@ -225,17 +225,17 @@ const Services = () => {
                               : "top-top"
                           }
                           data-aos-duration="1200"
-                          className={`p-4 bg-white rounded group shadow cursor-pointer ease-in duration-150 ${
+                          className={`p-1.5 bg-white rounded-lg group shadow-lg cursor-pointer ease-in duration-150 ${
                             scrollDirection === "down" ? "fade-in" : "fade-out"
                           }`}
                         >
                           <h3 className="flex items-center text-[20px] ">
                             <img
-                              className="h-[40px] w-[40px] items-center ml-14 mr-5"
+                              className="h-[36px] w-[40px] items-center ml-14 mr-5"
                               src={AI}
                               alt="AI"
                             ></img>
-                            AI
+                            <div className="lg:ml-0 ml-44">AI</div>
                           </h3>
                         </div>
                       </div>
@@ -262,17 +262,17 @@ const Services = () => {
                             scrollDirection === "down" ? "left" : "right"
                           }`}
                           data-aos-duration="1200"
-                          className={`bg-white p-4 rounded group shadow cursor-pointer ease-in duration-150 ${
+                          className={`p-1.5 bg-white rounded-lg group shadow-lg cursor-pointer ease-in duration-150 ${
                             scrollDirection === "down" ? "fade-in" : "fade-out"
                           }`}
                         >
                           <h3 className="flex items-center text-[20px] ">
                             <img
-                              className="h-[40px] w-[40px] items-center ml-10 mr-5"
+                              className="h-[36px] w-[40px] items-center ml-10 mr-5"
                               src={pyImage}
                               alt="Python"
                             ></img>
-                            Python
+                            <div className="lg:ml-0 ml-44">Python</div>
                           </h3>
                         </div>
                       </div>
@@ -304,17 +304,17 @@ const Services = () => {
                               : "top-top"
                           }
                           data-aos-duration="1200"
-                          className={`p-4 bg-white rounded group shadow cursor-pointer ease-in duration-150 ${
+                          className={`p-1.5 bg-white rounded-lg group shadow-lg cursor-pointer ease-in duration-150 ${
                             scrollDirection === "down" ? "fade-in" : "fade-out"
                           }`}
                         >
                           <h3 className="flex items-center text-[20px] ">
                             <img
-                              className="h-[40px] w-[40px] items-center ml-14 mr-5"
+                              className="h-[36px] w-[40px] items-center ml-14 mr-5"
                               src={Visual}
                               alt="Visual Studio"
                             ></img>
-                            Visual studio
+                            <div className="lg:ml-0 ml-36">Visual studio</div>
                           </h3>
                         </div>
                       </div>

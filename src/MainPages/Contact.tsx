@@ -13,7 +13,7 @@ const Contact = () => {
 
   return (
     <>
-      <section id="contact" className="pb-16">
+      <section id="contact" className="bg-gray-300 pb-16">
         <div className="container">
           <h2 className="text-headingColor font-[700] text-[2.5rem] mb-8">
             Get in touch
